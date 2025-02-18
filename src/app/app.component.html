@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <span>Expense Tracker App</span>
+
+</mat-toolbar>
+<div class="container">
+  <app-add-expense (expenseAdded)="addExpense($event)"></app-add-expense>
+  <!-- Expense List Component (Handle deletion) -->
+  <app-expense-list [expenses]="expenses" (expenseDeleted)="removeExpense($event)"></app-expense-list>
+
+  <app-expense-summary [expenses]="expenses"></app-expense-summary>
+
+</div>

@@ -1,0 +1,35 @@
+<mat-card>
+    <form [formGroup]="expenseForm" (ngSubmit)="addExpense()">
+        <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput  formControlName="description">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput  formControlName="amount">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Add Expense</button>
+    </form>
+</mat-card>
+  <!-- <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Expense Description</mat-label>
+      <input matInput [(ngModel)]="expenseDescription" placeholder="Enter description" />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="expenseAmount" placeholder="Enter amount" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="addExpense()">Add Expense</button>
+  </div> -->
+  
+  
+  
